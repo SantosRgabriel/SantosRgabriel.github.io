@@ -9,4 +9,4 @@ Primeiramente por questão de pratica e aprendizado, e posteriormente tentar faz
 A primeria pessoa que eu quero que veja meu site será "Eu" kkk, pode parecer besteira mas eu quero ver e me orgulhar, mas posteriormente possiveis contratadores.
 
 ## Quais futuras modificações/ adições você planeja realizar no site?
-Fazer um portfolio intertivo que seja agradavel a primeira vista e que tenha funionalidades, mas o principal que seja interativo.
+Fazer um portfolio intertivo que seja agradavel a primeira vista e que tenha funionalidades, mas o principal que seja interativo.'

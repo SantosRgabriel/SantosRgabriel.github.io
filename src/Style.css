@@ -11,7 +11,7 @@
     background-image: url(./5053309.jpg);
     background-position: center;
     background-size: cover;
-  }
+    }
   
   p {  
       font-size: large;
@@ -135,7 +135,7 @@
       
     }
     footer {
-      background-color: hsl(123, 73%, 38%);
+      background-color: blue (123, 73%, 38%);
       padding: 10px;
       text-align: center;
       color: white;
@@ -145,18 +145,18 @@
       
     }
     a{
-      color: rgb(52, 163, 48);
+      color: blue (52, 163, 48);
       font-weight: bold;
       text-decoration: none; /* remover sublinhado de link */
     }
   a:link, a:visited {
       text-decoration: none;
-      color: hsl(123, 73%, 38%);
+      color: blue(123, 73%, 38%);
       }
   a:hover {
     text-transform:uppercase;
       text-decoration: underline;
-      color: hsl(123, 100%, 53%);
+      color:rgb(15, 91, 255);
       }
   
   /* .testandodiv:hover{
@@ -166,5 +166,5 @@
   
   a:active {
       text-decoration: none;
-      color: hsl(123, 73%, 38%);
+      color: hsl(234, 86%, 46%);
       }
