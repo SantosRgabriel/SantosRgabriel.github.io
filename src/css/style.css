@@ -131,7 +131,9 @@ h2 {
   }
 
 section{
+  margin-top: 500px;
     max-width:800px;
+    height: 800px;
     box-sizing: inherit;
   }
 
@@ -176,7 +178,19 @@ section{
     text-align: center;
     flex-shrink: 1;
   }
-
+  .cardBoxFilmes {
+    margin-top: 10px;
+    background-color: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    width: 500px;
+    height: 600px;
+    max-width:500px;
+    max-height: 600px;
+    text-align: center;
+    flex-shrink: 1;
+  }
 
   .btn-card {
     background-color: black;
