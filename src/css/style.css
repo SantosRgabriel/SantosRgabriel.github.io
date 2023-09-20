@@ -50,7 +50,7 @@ nav a:hover {
     text-decoration: solid;
 }
 
-.button {
+.button-grs {
     text-align: center;
     white-space: normal;
 }
@@ -62,7 +62,8 @@ nav a:hover {
     /* outline: 0; */
 }
 
-.card {
+.card-grs {
+  border-radius: 0%;
     box-shadow: 0 2px 5px 0 191D88,
         0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
@@ -87,7 +88,7 @@ nav a:hover {
     margin-top: 46px
 }
 
-.container {
+.container-grs {
     padding: 0.01em 16px;
     justify-content: center;
     align-items: center;
