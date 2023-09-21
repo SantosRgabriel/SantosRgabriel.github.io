@@ -1,0 +1,22 @@
+section {
+    height: 100%;
+    width: 100%;
+    margin-top: 0px;
+    margin-left: 50px;
+    max-width: 50%;
+    position: fixed;
+    overflow-y: auto;
+}
+
+.card-container {
+    margin-left: inherit;
+    display: flex;
+    flex-direction:column;
+    order: 3;
+    
+}
+
+.card-container .cardBox {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
