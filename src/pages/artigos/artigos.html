@@ -9,53 +9,54 @@
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="/src/css/style.css">
     <link rel="icon" href="/src/images/svg20.png">
+    <link rel="stylesheet" href="./atigos-css.css">
 </head>
 
 <body>
     <div class="row">
         <div class="col-4">
+            <!-- INICIO BARRA LATERAL -->
             <div class="list-group" id="list-tab" role="tablist">
-                <a class="list-group-item list-group-item-action active" id="list-home-list" data-bs-toggle="list"
-                    href="#list-home" role="tab" aria-controls="list-home">Musicas</a>
-                <a class="list-group-item list-group-item-action" id="list-profile-list" data-bs-toggle="list"
-                    href="#list-profile" role="tab" aria-controls="list-profile">Séries</a>
-                <a class="list-group-item list-group-item-action" id="list-messages-list" data-bs-toggle="list"
-                    href="#list-messages" role="tab" aria-controls="list-messages">Jogos</a>
-                <!-- <a class="list-group-item list-group-item-action" id="list-settings-list" data-bs-toggle="list"
-                    href="#list-settings" role="tab" aria-controls="list-settings">Settings</a> -->
+                <a class="list-group-item list-group-item-action active" id="top-music-list" data-bs-toggle="list"
+                    href="#top-music" role="tab" aria-controls="top-music">Musicas</a>
+                <a class="list-group-item list-group-item-action" id="top-movies-list" data-bs-toggle="list"
+                    href="#top-movies" role="tab" aria-controls="top-movies">Séries</a>
+                <a class="list-group-item list-group-item-action" id="top-game-list" data-bs-toggle="list"
+                    href="#top-game" role="tab" aria-controls="top-game">Jogos</a>
             </div>
+            <!-- FIM BARRA LATERAL -->
         </div>
         <div class="col-8">
+            <!-- GRUPO DAS SEÇÕES  -->
             <div class="tab-content" id="nav-tabContent">
-                <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
-                    <!-- musicas -->
-                    <!-- <div class=" card-container"> -->
+                <section id="top-music" class="tab-pane fade show active" role="tabpanel" aria-labelledby="top-music-list">
+                    <div class="card-container">
                         <div class="cardBox">
                             <h1>Bitter Sweet Symphony</h1>
                             <p> Autor: The Verve</p>
                             <a class="btn-card" type="button-grs" href="https://www.youtube.com/watch?v=1lyu1KKwC74"
                                 target="_blank">Ouvir</a>
-
+    
                         </div>
-
+    
                         <div class="cardBox">
                             <h1>What's Up? </h1>
-
+    
                             <p>Autor: 4 Non
                                 Blondes</p>
                             <a class="btn-card" type="button-grs" href="https://www.youtube.com/watch?v=6NXnxTNIWkc"
                                 target="_blank">Ouvir</a>
-
+    
                         </div>
-
+    
                         <div class="cardBox">
                             <h1>Wonderwall</h1>
                             <p>Autor: Oasis</p>
                             <a class="btn-card" type="button-grs" href="https://www.youtube.com/watch?v=bx1Bh8ZvH84"
                                 target="_blank">Ouvir</a>
-
+    
                         </div>
-
+    
                         <div class="cardBox">
                             <h1>Proibida pra mim</h1>
                             <p>Autor:
@@ -63,9 +64,9 @@
                                 Brons Jr.</p>
                             <a class="btn-card" type="button-grs" href="https://www.youtube.com/watch?v=TJRIZS4Z7Mw"
                                 target="_blank">Ouvir</a>
-
+    
                         </div>
-
+    
                         <div class="cardBox">
                             <h1>I Don't Want to miss a
                                 thing</h1>
@@ -74,8 +75,8 @@
                                 target="_blank">Ouvir</a>
                         </div>
                     </div>
-                </div>
-                <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
+                </section>
+                <section id="top-movies" class="tab-pane fade" role="tabpanel" aria-labelledby="top-movies-list">
                     <!-- filmes e séries -->
                     <div class=" card-container">
                         <div class="cardBoxFilmes">
@@ -139,8 +140,8 @@
                         </div>
                     </div>
 
-                </div>
-                <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">
+                </section>
+                <section id="top-game" class="tab-pane fade" role="tabpanel" aria-labelledby="top-game-list">
                     <!-- jogos -->
                     <div class=" card-container">
                         <div class="cardBoxFilmes">
@@ -220,9 +221,7 @@
                         </div>
                     </div>
 
-                </div>
-                <!-- <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">...
-                </div> -->
+                </section>
             </div>
         </div>
     </div>
