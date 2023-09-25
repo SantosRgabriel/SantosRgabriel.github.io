@@ -1,65 +1,177 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Musicas</title>
-    <link rel="stylesheet" href="/src/css/style.css">
-    <link rel="icon" href="/src/images/svg20.png">
+    <title>Top 5 músicas favoritas</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/articles.css">
 </head>
 
 <body>
-    <section class="container-grscontent center padding-64">
+    <!-- HEADER -->
+    <header class="card-grs bg-dark text-white">
+        <nav class="nav-items">
+            <a class="button-grs to-left padding-large" href="#INICIO"><strong><img class="logo"
+                        src="./src/images/svg20.png" alt=""></strong></a>
+            <a class="button-grs to-right padding-large" href="#contato">CONTATO</a>
+            <a class="button-grs to-right padding-large" href="#artigos">ARTIGOS</a>
+            <a class="button-grs to-right padding-large" href="#projetos">PROJETOS</a>
+            <a class="button-grs to-right padding-large" href="#sobre">SOBRE</a>
 
-        <div class=" card-container">
-            <div class="cardBox">
-                <h1>Bitter Sweet Symphony</h1>
-                <p> Autor: The Verve</p>
-                <a class="btn-card" type="button-grs" href="https://www.youtube.com/watch?v=1lyu1KKwC74"
-                    target="_blank">Ouvir</a>
+        </nav>
+    </header>
+    <div class="content-group1">
 
-            </div>
 
-            <div class="cardBox">
-                <h1>What's Up? </h1>
-
-                <p>Autor: 4 Non
-                    Blondes</p>
-                <a class="btn-card" type="button-grs" href="https://www.youtube.com/watch?v=6NXnxTNIWkc"
-                    target="_blank">Ouvir</a>
-
-            </div>
-
-            <div class="cardBox">
-                <h1>Wonderwall</h1>
-                <p>Autor: Oasis</p>
-                <a class="btn-card" type="button-grs" href="https://www.youtube.com/watch?v=bx1Bh8ZvH84"
-                    target="_blank">Ouvir</a>
-
-            </div>
-
-            <div class="cardBox">
-                <h1>Proibida pra mim</h1>
-                <p>Autor:
-                    Charlie
-                    Brons Jr.</p>
-                <a class="btn-card" type="button-grs" href="https://www.youtube.com/watch?v=TJRIZS4Z7Mw"
-                    target="_blank">Ouvir</a>
-
-            </div>
-
-            <div class="cardBox">
-                <h1>I Don't Want to miss a
-                    thing</h1>
-                <p>Autor: Aerosmith</p>
-                <a class="btn-card" type="button-grs" href="https://www.youtube.com/watch?v=Us3cGQs0Q8A"
-                    target="_blank">Ouvir</a>
-            </div>
+        <div class="left-side-bar card">
+            <button class="linkToArticle" onclick="openContent(event, 'Article1')"
+                id="abertoPorPadrao">Article1</button>
+            <button class="linkToArticle" onclick="openContent(event, 'Article2')">Article2</button>
+            <button class="linkToArticle" onclick="openContent(event, 'Article3')">Article3</button>
         </div>
+        <div class="articles">
+            <section id="Article1" class="article-content card  cardBox">
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="..." class="img-fluid rounded-start" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Bitter Sweet Symphony</h5>
+                                <p class="card-text">Autor: The Verve<br>
+                                    Data de lançamento: 1997<br>
+                                    Álbum: Urban Hymns<br>[
+                                    Gêneros: Alternativa/indie, Pop, Rock
+                                </p>
+                                <p class="card-text"><small class="text-body-secondary"> <a
+                                            href="https://www.youtube.com/watch?v=1lyu1KKwC74" target="_blank">Ouça
+                                            Agora</a></small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="..." class="img-fluid rounded-start" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">What's Up?</h5>
+                                <p class="card-text">Autor: 4 Non Blondes<br>
+                                    Lançamento: 1992<br>
+                                    Álbum: Bigger, Better, Faster, More!<br>[
+                                    Gêneros: Rock alternativo, Hard rock
+                                </p>
+                                <p class="card-text"><small class="text-body-secondary"> <a
+                                            href="https://www.youtube.com/watch?v=6NXnxTNIWkc" target="_blank">Ouça
+                                            Agora</a></small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
 
-    </section>
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="..." class="img-fluid rounded-start" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Wonderwall</h5>
+                                <p class="card-text">Autor: Oasis<br>
+                                    Data de lançamento: 1995<br>
+                                    Álbum: (What's the Story) Morning Glory?<br>[
+                                    Gênero: Alternativa/indie
+                                </p>
+                                <p class="card-text"><small class="text-body-secondary"> <a
+                                            href="https://www.youtube.com/watch?v=bx1Bh8ZvH84" target="_blank">Ouça
+                                            Agora</a></small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="..." class="img-fluid rounded-start" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Proibida pra mim</h5>
+                                <p class="card-text">Autor:
+                                    Charlie
+                                    Brons Jr.<br>
+                                    Data de lançamento: 1997<br>
+                                    Álbum: Transpiração Contínua Prolongada<br>[
+                                    Gêneros: Reggae, Pop, Rock
+                                </p>
+                                <p class="card-text"><small class="text-body-secondary"> <a
+                                            href="https://www.youtube.com/watch?v=TJRIZS4Z7Mw" target="_blank">Ouça
+                                            Agora</a></small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="..." class="img-fluid rounded-start" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">I Don't Want to miss a
+                                    thing</h5>
+                                <p class="card-text">Autor: Aerosmith<br>
+                                    Data de lançamento: 1998<br>
+                                    Álbum: I Don’t Want to Miss a Thing<br>[
+                                    Gêneros: Hard rock, Pop rock, Glam metal
+                                </p>
+                                <p class="card-text"><small class="text-body-secondary"> <a
+                                            href="https://www.youtube.com/watch?v=Us3cGQs0Q8A" target="_blank">Ouça
+                                            Agora</a></small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </section>
+
+            <section id="Article2" class="article-content card  cardBox">
+                <h3>Review de filmes</h3>
+                <p>
+                    asssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+                    asdfasdaaaaaaaaaaaaaaaasdfasdfasdfasdfaadfasfdasdf
+                    asfdasdfasdfasdfasdfasdfasdfasfdasfafds
+                </p>
+            </section>
+
+            <section id="Article3" class="article-content card  cardBox">
+                <h3>Realizações acadêmicas</h3>
+                <p>
+                    asssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+                    asdfasdaaaaaaaaaaaaaaaasdfasdfasdfasdfaadfasfdasdf
+                    asfdasdfasdfasdfasdfasdfasdfasfdasfafds
+
+                </p>
+            </section>
+        </div>
+    </div>
+
+
+
+    <footer class="container content center">
+        <p class="center opacity wide">By Gabriel Ribeiro</p>
+    </footer>
+    <script src="../script/script.js"></script>
 </body>
 
 </html>

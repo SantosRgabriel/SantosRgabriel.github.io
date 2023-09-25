@@ -135,11 +135,11 @@ h2 {
     padding-bottom: 32px !important;
   }
 
-section{
+.section{
   margin-top: 500px;
-    max-width:800px;
-    height: 600px;
-    box-sizing: inherit;
+  max-width:800px;
+  height: 600px;
+  box-sizing: inherit;
   }
 
  section p.justify{
