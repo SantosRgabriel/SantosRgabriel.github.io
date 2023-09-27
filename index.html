@@ -44,7 +44,7 @@
         <section id="projetos" class="container-grs content center padding-64 black-ground">
             <h2 class="wide">PROJETOS</h2>
             <div class="card-container">
-                <div class="cardBox">
+                <div class="cardBox" id=".imageFundo1">
                     <h2>App Inventor</h2>
                     <p>Meus projetos para celular</p>
                     <a class="btn-card" type="button-grs"
@@ -58,51 +58,56 @@
                 </div>
             </div>
         </section>
-        <section id="artigos" class="container-grs content center padding-64">
-            <h2 class="wide">ARTIGOS</h2>
+        <section id="artigos" class="center">
 
-            <div id="carouselExample" class="carousel slide">
+
+            <div id="carouselExampleCaptions" class="carousel slide">
                 <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="card-container">
-                            <div class="cardBox">
-                                <h2>Top Músicas</h2>
-                                <p>As melhores músicas, na minha opnião.</p>
-                                <a class="btn-card" type="button-grs" href="./src/pages/artigos.html">Leia Mais</a>
-                            </div>
+
+
+                    <div id="imageFundo1" class="carousel-item active artigos">
+                        <div class="d-none d-md-block">
+                            <h2 class="wide">ARTIGOS</h2>
+                            <h2>Top Músicas</h2>
+                            <p>As melhores músicas, na minha opnião.</p>
+                            <a class="btn-card" type="button-grs" href="./src/pages/artigos.html">Leia Mais</a>
                         </div>
                     </div>
-                    <div class="carousel-item">
-                        <div class="card-container">
-                            <div class="cardBox">
-                                <h2>Séries</h2>
-                                <p>Top 3 séries que mais gostei</p>
-                                <a class="btn-card" type="button-grs" href="./src/pages/artigos.html">Leia Mais</a>
-                            </div>
+
+                    <div id="imageFundo2" class="carousel-item artigos">
+                        <div class="d-none d-md-block">
+                            <h2 class="wide">ARTIGOS</h2>
+                            <h2>Séries</h2>
+                            <p>Top 3 séries que mais gostei</p>
+                            <a class="btn-card" type="button-grs" href="./src/pages/artigos.html">Leia Mais</a>
                         </div>
                     </div>
-                    <div class="carousel-item">
-                        <div class="card-container">
-                            <div class="cardBox">
+
+                    <div id="imageFundo3" class="carousel-item artigos">
+                        <div class="d-none d-md-block align-center">
+
+                                <h2 class="wide">ARTIGOS</h2>
                                 <h2>Top Jogos</h2>
                                 <p>Jogos que eu mais jogo atualmente</p>
                                 <a class="btn-card" type="button-grs" href="./src/pages/artigos.html">Leia Mais</a>
-                            </div>
+                        
                         </div>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
-                        data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
-                        data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
                 </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
         </section>
-        <section id="contato" class="container-grs content center padding-32 black-ground">
+
+        <section id="contato" class="container-grs center padding-32 black-ground">
             <h2 class="wide">CONTATO</h2>
             <ul>
                 <li><a href="mailto:gabrielsantos.sgra@gmail.com">E-mail</a></li>
