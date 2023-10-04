@@ -8,11 +8,59 @@
 </head>
 
 <body>
-
+    <!-- <div>
     <input type="text" id="nome">
     <button onclick="salvar()">salvar</button>
 
     <p id="result"></p>
+</div> -->
+
+    <div>
+        <h2>Verificar idade</h2>
+        <input type="number" id="idade">
+        <button onclick="verIdade()">salvar</button>
+        <p id="resultIdade"></P>
+    </div>
+
+    <div>
+        <h2>Comparando números</h2>
+        <input type="number" id="num1">
+        <input type="number" id="num2">
+        <button onclick="compNum()">salvar</button>
+        <p id="resultcomN"></p>
+    </div>
+
+    <div>
+        <h2>Verificando divisibilidade</h2>
+        <input type="number" id="num3">
+        <input type="number" id="num4">
+        <button onclick="comparar()">salvar</button>
+        <p id="resultVer"></p>
+    </div>
+
+    <div>
+        <h2>Verificar Temperatura</h2>
+        <input type="number" id="temp">
+        <button onclick="verTemp()">salvar</button>
+        <p id="resulClima"></p>
+       </div>
+
+       <div>
+        <h2>Verificação de notas</h2>
+        <h3>materia1</h3>
+        <input type="number" id="m1b1">
+        <input type="number" id="m1b2">
+        <input type="number" id="m1b3">
+        <button></button>
+        <h3>materia2</h3>
+        <input type="number" id="m2b1">
+        <input type="number" id="m2b2">
+        <input type="number" id="m2b3">
+        <h3>materia3</h3>
+        <input type="number" id="m3b1">
+        <input type="number" id="m3b2">
+        <input type="number" id="m3b3">
+       </div>
 
     <script>
         function salvar() {
@@ -20,6 +68,55 @@
 
             document.getElementById('result').innerText = nome;
         }
+
+        function verIdade() {
+            let idade = document.getElementById('idade').value;
+            if (idade < 60 && idade >= 18) {
+                document.getElementById('resultIdade').innerText = "Você é adulto";
+            } else if (idade < 18) {
+                document.getElementById('resultIdade').innerText = "Você é menor de idade";
+            } else{
+                document.getElementById('resultIdade').innerText = "Você é idoso";
+            }
+        }       
+
+        function compNum(){
+            let num1 = document.getElementById('num1').value;
+            let num2 = document.getElementById('num2').value;
+            if(num1 > num2){
+                document.getElementById('resultcomN').innerText = num1 + " é maior";
+            }else if (num1 == num2){
+                document.getElementById('resultcomN').innerText = "Os numeros são iguais";
+            }else{
+                document.getElementById('resultcomN').innerText = num2 +" é o maior";
+            }
+
+        }
+
+        function comparar() {
+            let num1 = document.getElementById('num3').value;
+            let num2 = document.getElementById('num4').value;
+            if(num1 % num2 == 0){
+                document.getElementById('resultVer').innerText = "O primeiro valor é divisivel pelo segundo";
+            
+            }else{
+                document.getElementById('resultVer').innerText = "Eles não são divisiveis";
+            }
+            
+        }
+
+        function verTemp() {
+            let temp = document.getElementById('temp').value;
+            if (temp <= 26 && temp >= 18) {
+                document.getElementById('resulClima').innerText = "O clima está agradável";
+            } else if (temp < 18) {
+                document.getElementById('resulClima').innerText = "O clima está frio";
+            } else{
+                document.getElementById('resulClima').innerText = "O clima está quente";
+            }
+        }       
+
+
 
     </script>
 </body>
