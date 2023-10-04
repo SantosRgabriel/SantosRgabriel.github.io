@@ -81,11 +81,11 @@
         }       
 
         function compNum(){
-            let num1 = document.getElementById('num1').value;
-            let num2 = document.getElementById('num2').value;
+            let num1 = parseFloat(document.getElementById('num1').value)
+            let num2 = parseFloat(document.getElementById('num2').value)
             if(num1 > num2){
-                document.getElementById('resultcomN').innerText = num1 + " é maior";
-            }else if (num1 == num2){
+                document.getElementById('resultcomN').innerText = num1 + " é o maior";
+            }else if (num1 === num2){
                 document.getElementById('resultcomN').innerText = "Os numeros são iguais";
             }else{
                 document.getElementById('resultcomN').innerText = num2 +" é o maior";
