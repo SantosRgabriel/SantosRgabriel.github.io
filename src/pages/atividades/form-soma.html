@@ -43,24 +43,54 @@
         <input type="number" id="temp">
         <button onclick="verTemp()">salvar</button>
         <p id="resulClima"></p>
-       </div>
+    </div>
 
-       <div>
-        <h2>Verificação de notas</h2>
-        <h3>materia1</h3>
-        <input type="number" id="m1b1">
-        <input type="number" id="m1b2">
-        <input type="number" id="m1b3">
-        <button></button>
-        <h3>materia2</h3>
-        <input type="number" id="m2b1">
-        <input type="number" id="m2b2">
-        <input type="number" id="m2b3">
-        <h3>materia3</h3>
-        <input type="number" id="m3b1">
-        <input type="number" id="m3b2">
-        <input type="number" id="m3b3">
-       </div>
+
+    <div>
+        <h2>Calculando fatorial</h2>
+        <input type="number" id="fat">
+        <button onclick="calcuFat()">salvar</button>
+        <p id="resulFat"></p>
+    </div>
+
+    <div>
+        <h2>Calculando uma tabuada</h2>
+        <input type="number" id="numTab">
+        <button onclick="calcTab()">salvar</button>
+        <p id="resulTab"></p>
+    </div>
+
+    <div>
+        <h2>Contagem Regressiva</h2>
+        <input type="number" id="contNum">
+        <button onclick="contagem()">salvar</button>
+        <p id="resulCont"></p>
+    </div>
+
+    <div>
+        <div>
+            <h2>Verificação de notas</h2>
+            <h3>materia1</h3>
+            <input type="number" id="m1b1">
+            <input type="number" id="m1b2">
+            <input type="number" id="m1b3">
+            <p id="mediam1"></p>
+            <p id="situm1"></p>
+            <h3>materia2</h3>
+            <input type="number" id="m2b1">
+            <input type="number" id="m2b2">
+            <input type="number" id="m2b3">
+            <p id="mediam2"></p>
+            <p id="situm2"></p>
+            <h3>materia3</h3>
+            <input type="number" id="m3b1">
+            <input type="number" id="m3b2">
+            <input type="number" id="m3b3">
+            <p id="mediam3"></p>
+            <p id="situm3"></p>
+        </div>
+        <button onclick="nota()">salvar</button>
+    </div>
 
     <script>
         function salvar() {
@@ -75,20 +105,20 @@
                 document.getElementById('resultIdade').innerText = "Você é adulto";
             } else if (idade < 18) {
                 document.getElementById('resultIdade').innerText = "Você é menor de idade";
-            } else{
+            } else {
                 document.getElementById('resultIdade').innerText = "Você é idoso";
             }
-        }       
+        }
 
-        function compNum(){
+        function compNum() {
             let num1 = parseFloat(document.getElementById('num1').value)
             let num2 = parseFloat(document.getElementById('num2').value)
-            if(num1 > num2){
+            if (num1 > num2) {
                 document.getElementById('resultcomN').innerText = num1 + " é o maior";
-            }else if (num1 === num2){
+            } else if (num1 === num2) {
                 document.getElementById('resultcomN').innerText = "Os numeros são iguais";
-            }else{
-                document.getElementById('resultcomN').innerText = num2 +" é o maior";
+            } else {
+                document.getElementById('resultcomN').innerText = num2 + " é o maior";
             }
 
         }
@@ -96,13 +126,13 @@
         function comparar() {
             let num1 = document.getElementById('num3').value;
             let num2 = document.getElementById('num4').value;
-            if(num1 % num2 == 0){
+            if (num1 % num2 == 0) {
                 document.getElementById('resultVer').innerText = "O primeiro valor é divisivel pelo segundo";
-            
-            }else{
+
+            } else {
                 document.getElementById('resultVer').innerText = "Eles não são divisiveis";
             }
-            
+
         }
 
         function verTemp() {
@@ -111,11 +141,91 @@
                 document.getElementById('resulClima').innerText = "O clima está agradável";
             } else if (temp < 18) {
                 document.getElementById('resulClima').innerText = "O clima está frio";
-            } else{
+            } else {
                 document.getElementById('resulClima').innerText = "O clima está quente";
             }
-        }       
+        }
 
+        function calcFat() {
+            let fat = document.getElementById('fat').value;
+            let result = fat
+            for (let i = 1; i < fat; i++) {
+                result = result * i
+
+            }
+            document.getElementById('resulFat').innerText = result;
+
+        }
+
+        function calcTab() {
+            let numTab = document.getElementById('numTab').value;
+            for (let i = 1; i <= 10; i++) {
+                document.getElementById('resulTab').innerHTML += numTab + "x" + i + "=" + numTab * i + '<br>';
+
+            }
+        }
+
+        function contagem() {
+            let contNum = document.getElementById('contNum').value;
+            for (let i = contNum; i >= 0; i--) {
+                document.getElementById('resulCont').innerHTML += i + "<br>"
+            }
+        }
+
+        function nota() {
+            let notas1 = [
+                parseFloat(document.getElementById('m1b1').value),
+                parseFloat(document.getElementById('m1b2').value),
+                parseFloat(document.getElementById('m1b3').value)
+            ]
+            let notas2 = [
+                parseFloat(document.getElementById('m2b1').value),
+                parseFloat(document.getElementById('m2b2').value),
+                parseFloat(document.getElementById('m2b3').value)
+            ]
+            let notas3 = [
+                parseFloat(document.getElementById('m3b1').value),
+                parseFloat(document.getElementById('m3b2').value),
+                parseFloat(document.getElementById('m1b3').value)
+            ]
+
+            function calcMed(vetor) {
+                let media = 0
+                for (let i = 0; i < vetor.length; i++) {
+                    media += vetor[i]
+
+                }
+                media = media / vetor.length
+                return media
+            }
+            function verSitu(vetor) {
+                let soma = 0;
+                for (let i = 0; i < vetor.length; i++) {
+                    soma += vetor[i]
+
+                }
+                return soma
+            }
+            document.getElementById('mediam1').innerHTML = "A média das noatas é: " + calcMed(notas1)
+            if (verSitu(notas1) >= 60) {
+                document.getElementById('situm1').innerHTML = "Aprovado"
+            } else {
+                document.getElementById('situm1').innerText = "Reprovado"
+            }
+            document.getElementById('mediam2').innerHTML = "A média das noatas é: " + calcMed(notas2)
+            if (verSitu(notas2) >= 60) {
+                document.getElementById('situm2').innerHTML = "Aprovado"
+            } else {
+                document.getElementById('situm2').innerText = "Reprovado"
+            }
+            document.getElementById('mediam3').innerHTML = "A média das noatas é: " + calcMed(notas3)
+            if (verSitu(notas3) >= 60) {
+                document.getElementById('situm3').innerHTML = "Aprovado"
+            } else {
+                document.getElementById('situm3').innerText = "Reprovado"
+            }
+
+        }
 
 
     </script>
