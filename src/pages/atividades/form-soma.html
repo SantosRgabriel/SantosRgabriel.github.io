@@ -4,171 +4,233 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <title>Soma</title>
 </head>
 
 <body>
-    <!-- <div>
-    <input type="text" id="nome">
-    <button onclick="salvar()">salvar</button>
 
-    <p id="result"></p>
-</div> -->
-
-    <div>
-        <h2>Verificar idade</h2>
-        <input type="number" id="idade">
-        <button onclick="verIdade()">salvar</button>
-        <p id="resultIdade"></P>
-    </div>
-
-    <div>
-        <h2>Comparando números</h2>
-        <input type="number" id="num1">
-        <input type="number" id="num2">
-        <button onclick="compNum()">salvar</button>
-        <p id="resultcomN"></p>
-    </div>
-
-    <div>
-        <h2>Verificando divisibilidade</h2>
-        <input type="number" id="num3">
-        <input type="number" id="num4">
-        <button onclick="comparar()">salvar</button>
-        <p id="resultVer"></p>
-    </div>
-
-    <div>
-        <h2>Verificar Temperatura</h2>
-        <input type="number" id="temp">
-        <button onclick="verTemp()">salvar</button>
-        <p id="resulClima"></p>
-    </div>
-
-
-    <div>
-        <h2>Calculando fatorial</h2>
-        <input type="number" id="fat">
-        <button onclick="calcuFat()">salvar</button>
-        <p id="resulFat"></p>
-    </div>
-
-    <div>
-        <h2>Calculando uma tabuada</h2>
-        <input type="number" id="numTab">
-        <button onclick="calcTab()">salvar</button>
-        <p id="resulTab"></p>
-    </div>
-
-    <div>
-        <h2>Contagem Regressiva</h2>
-        <input type="number" id="contNum">
-        <button onclick="contagem()">salvar</button>
-        <p id="resulCont"></p>
-    </div>
-
-    <div>
-        <div>
-            <h2>Verificação de notas</h2>
-            <h3>materia1</h3>
-            <input type="number" id="m1b1">
-            <input type="number" id="m1b2">
-            <input type="number" id="m1b3">
-            <p id="mediam1"></p>
-            <p id="situm1"></p>
-            <h3>materia2</h3>
-            <input type="number" id="m2b1">
-            <input type="number" id="m2b2">
-            <input type="number" id="m2b3">
-            <p id="mediam2"></p>
-            <p id="situm2"></p>
-            <h3>materia3</h3>
-            <input type="number" id="m3b1">
-            <input type="number" id="m3b2">
-            <input type="number" id="m3b3">
-            <p id="mediam3"></p>
-            <p id="situm3"></p>
+    <div class="row">
+        <div class="col-4">
+            <div class="list-group" id="list-tab" role="tablist">
+                <a class="list-group-item list-group-item-action active" id="list-home-list" data-bs-toggle="list"
+                    href="#list-1" role="tab" aria-controls="list-home">Teste</a>
+                <a class="list-group-item list-group-item-action" id="list-profile-list" data-bs-toggle="list"
+                    href="#list-2" role="tab" aria-controls="list-profile">Verifica idade</a>
+                <a class="list-group-item list-group-item-action" id="list-messages-list" data-bs-toggle="list"
+                    href="#list-3" role="tab" aria-controls="list-messages">Comparando numeros</a>
+                <a class="list-group-item list-group-item-action" id="list-settings-list" data-bs-toggle="list"
+                    href="#list-4" role="tab" aria-controls="list-settings">Verificando divisibilidade</a>
+                <a class="list-group-item list-group-item-action" id="list-settings-list" data-bs-toggle="list"
+                    href="#list-5" role="tab" aria-controls="list-settings">Verificando clima</a>
+                <a class="list-group-item list-group-item-action" id="list-settings-list" data-bs-toggle="list"
+                    href="#list-6" role="tab" aria-controls="list-settings">Calculando fatorial</a>
+                <a class="list-group-item list-group-item-action" id="list-settings-list" data-bs-toggle="list"
+                    href="#list-7" role="tab" aria-controls="list-settings">Calculando tabuada</a>
+                <a class="list-group-item list-group-item-action" id="list-settings-list" data-bs-toggle="list"
+                    href="#list-8" role="tab" aria-controls="list-settings">Contagem Regressiva</a>
+                <a class="list-group-item list-group-item-action" id="list-settings-list" data-bs-toggle="list"
+                    href="#list-9" role="tab" aria-controls="list-settings">Boletim</a>
+            </div>
         </div>
-        <button onclick="nota()">salvar</button>
+        <div class="col-8">
+            <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="list-1" role="tabpanel" aria-labelledby="list-home-list">
+                    <div>
+                        <h2>Entendendo os inputs</h2>
+                        <input type="text" id="nome" placeholder="Digite seu nome">
+                        <button onclick="salvar()" class="btn btn-dark">salvar</button>
+                        <p id="result"></p>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="list-2" role="tabpanel" aria-labelledby="list-profile-list">
+                    <div>
+                        <h2>Verificar idade</h2>
+                        <input type="number" id="idade" placeholder="digite uma idade">
+                        <button onclick="verIdade()" class="btn btn-dark">salvar</button>
+                        <p id="resultIdade"></P>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="list-3" role="tabpanel" aria-labelledby="list-messages-list">
+                    <div>
+                        <h2>Comparando números</h2>
+                        <input type="number" id="num1" placeholder="digite um numero">
+                        <input type="number" id="num2" placeholder="digite outro numero">
+                        <button onclick="compNum()" class="btn btn-dark">salvar</button>
+                        <p id="resultcomN"></p>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="list-4" role="tabpanel" aria-labelledby="list-settings-list">
+                    <div>
+                        <h2>Verificando divisibilidade</h2>
+                        <input type="number" id="num3" placeholder="digite um numero">
+                        <input type="number" id="num4" placeholder="digite outro numero">
+                        <button onclick="comparar()" class="btn btn-dark">salvar</button>
+                        <p id="resultVer"></p>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="list-5" role="tabpanel" aria-labelledby="list-settings-list">
+                    <div>
+                        <h2>Verificar Temperatura</h2>
+                        <input type="number" id="temp" placeholder="digite um numero">
+                        <button onclick="verTemp()" class="btn btn-dark">salvar</button>
+                        <p id="resulClima"></p>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="list-6" role="tabpanel" aria-labelledby="list-settings-list">
+                    <div>
+                        <h2>Calculando fatorial</h2>
+                        <input type="number" id="fat" placeholder="digite um numero">
+                        <button onclick="calcuFat()" class="btn btn-dark">salvar</button>
+                        <p id="resulFat"></p>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="list-7" role="tabpanel" aria-labelledby="list-settings-list">
+                    <div>
+                        <h2>Calculando uma tabuada</h2>
+                        <input type="number" id="numTab" placeholder="digite um numero">
+                        <button onclick="calcTab()" class="btn btn-dark">salvar</button>
+                        <p id="resulTab"></p>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="list-8" role="tabpanel" aria-labelledby="list-settings-list">
+                    <div>
+                        <h2>Contagem Regressiva</h2>
+                        <input type="number" id="contNum" placeholder="digite um numero">
+                        <button onclick="contagem()" class="btn btn-dark">salvar</button>
+                        <p id="resulCont"></p>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="list-9" role="tabpanel" aria-labelledby="list-settings-list">
+                    <div>
+                        <div>
+                            <h2>Verificação de notas</h2>
+                            <h3>materia1</h3>
+                            <input type="number" id="m1b1" placeholder="digite um numero">
+                            <input type="number" id="m1b2" placeholder="digite um numero">
+                            <input type="number" id="m1b3" placeholder="digite um numero">
+                            <p id="mediam1"></p>
+                            <p id="situm1"></p>
+                            <h3>materia2</h3>
+                            <input type="number" id="m2b1" placeholder="digite um numero">
+                            <input type="number" id="m2b2" placeholder="digite um numero">
+                            <input type="number" id="m2b3" placeholder="digite um numero">
+                            <p id="mediam2"></p>
+                            <p id="situm2"></p>
+                            <h3>materia3</h3>
+                            <input type="number" id="m3b1" placeholder="digite um numero">
+                            <input type="number" id="m3b2" placeholder="digite um numero">
+                            <input type="number" id="m3b3" placeholder="digite um numero">
+                            <p id="mediam3"></p>
+                            <p id="situm3"></p>
+                        </div>
+                        <button onclick="nota()" class="btn btn-dark">salvar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script>
-        function salvar() {
-            let nome = document.getElementById('nome').value;
+        function vazio(txt1, txt2) {
+            if (document.getElementById(txt1).value === '') {
+                document.getElementById(txt2).innerText = "Digite um número"
+                return true
+            } else {
+                document.getElementById(txt2).innerText = " "
+                return false
+            }
+        }
 
-            document.getElementById('result').innerText = nome;
+        function salvar() {
+            if (!vazio('nome', 'result')) {
+                let nome = document.getElementById('nome').value;
+
+                document.getElementById('result').innerText = "Olá " + nome + " nesta lista de testes vacê entenderá como funciona os inputs";
+            }
         }
 
         function verIdade() {
-            let idade = document.getElementById('idade').value;
-            if (idade < 60 && idade >= 18) {
-                document.getElementById('resultIdade').innerText = "Você é adulto";
-            } else if (idade < 18) {
-                document.getElementById('resultIdade').innerText = "Você é menor de idade";
-            } else {
-                document.getElementById('resultIdade').innerText = "Você é idoso";
+            if (!vazio('idade', 'resultIdade')) {
+                let idade = document.getElementById('idade').value;
+                if (idade < 60 && idade >= 18) {
+                    document.getElementById('resultIdade').innerText = "Você é adulto";
+                } else if (idade < 18) {
+                    document.getElementById('resultIdade').innerText = "Você é menor de idade";
+                } else {
+                    document.getElementById('resultIdade').innerText = "Você é idoso";
+                }
             }
         }
 
         function compNum() {
-            let num1 = parseFloat(document.getElementById('num1').value)
-            let num2 = parseFloat(document.getElementById('num2').value)
-            if (num1 > num2) {
-                document.getElementById('resultcomN').innerText = num1 + " é o maior";
-            } else if (num1 === num2) {
-                document.getElementById('resultcomN').innerText = "Os numeros são iguais";
-            } else {
-                document.getElementById('resultcomN').innerText = num2 + " é o maior";
+            if (!vazio('num1', 'resultcomN') && !vazio('num2', 'resultcomN')) {
+                let num1 = parseFloat(document.getElementById('num1').value)
+                let num2 = parseFloat(document.getElementById('num2').value)
+                if (num1 > num2) {
+                    document.getElementById('resultcomN').innerText = num1 + " é o maior";
+                } else if (num1 === num2) {
+                    document.getElementById('resultcomN').innerText = "Os numeros são iguais";
+                } else {
+                    document.getElementById('resultcomN').innerText = num2 + " é o maior";
+                }
             }
-
         }
 
         function comparar() {
-            let num1 = document.getElementById('num3').value;
-            let num2 = document.getElementById('num4').value;
-            if (num1 % num2 == 0) {
-                document.getElementById('resultVer').innerText = "O primeiro valor é divisivel pelo segundo";
+            if (!vazio('num3', 'resultVer') && !vazio('num4', 'resultVer')) {
+                let num1 = document.getElementById('num3').value;
+                let num2 = document.getElementById('num4').value;
+                if (num1 % num2 == 0) {
+                    document.getElementById('resultVer').innerText = "O primeiro valor é divisivel pelo segundo";
 
-            } else {
-                document.getElementById('resultVer').innerText = "Eles não são divisiveis";
+                } else {
+                    document.getElementById('resultVer').innerText = "Eles não são divisiveis";
+                }
             }
-
         }
 
         function verTemp() {
-            let temp = document.getElementById('temp').value;
-            if (temp <= 26 && temp >= 18) {
-                document.getElementById('resulClima').innerText = "O clima está agradável";
-            } else if (temp < 18) {
-                document.getElementById('resulClima').innerText = "O clima está frio";
-            } else {
-                document.getElementById('resulClima').innerText = "O clima está quente";
+            if (!vazio('temp', 'resulClima')) {
+                let temp = document.getElementById('temp').value;
+                if (temp <= 26 && temp >= 18) {
+                    document.getElementById('resulClima').innerText = "O clima está agradável";
+                } else if (temp < 18) {
+                    document.getElementById('resulClima').innerText = "O clima está frio";
+                } else {
+                    document.getElementById('resulClima').innerText = "O clima está quente";
+                }
             }
         }
 
         function calcFat() {
-            let fat = document.getElementById('fat').value;
-            let result = fat
-            for (let i = 1; i < fat; i++) {
-                result = result * i
+            if (!vazio('fat', 'resulFat')) {
+                let fat = document.getElementById('fat').value;
+                let result = fat
+                for (let i = 1; i < fat; i++) {
+                    result = result * i
 
+                }
+                document.getElementById('resulFat').innerText = result;
             }
-            document.getElementById('resulFat').innerText = result;
-
         }
 
         function calcTab() {
-            let numTab = document.getElementById('numTab').value;
-            for (let i = 1; i <= 10; i++) {
-                document.getElementById('resulTab').innerHTML += numTab + "x" + i + "=" + numTab * i + '<br>';
-
+            if (!vazio('numTab', 'resulTab')) {
+                let numTab = document.getElementById('numTab').value;
+                for (let i = 1; i <= 10; i++) {
+                    document.getElementById('resulTab').innerHTML += numTab + "x" + i + "=" + numTab * i + '<br>';
+                }
             }
         }
 
         function contagem() {
-            let contNum = document.getElementById('contNum').value;
-            for (let i = contNum; i >= 0; i--) {
-                document.getElementById('resulCont').innerHTML += i + "<br>"
+            if (!vazio('contNum', 'resulCont')) {
+                let contNum = document.getElementById('contNum').value;
+                for (let i = contNum; i >= 0; i--) {
+                    document.getElementById('resulCont').innerHTML += i + "<br>"
+                }
             }
         }
 
@@ -229,6 +291,9 @@
 
 
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
