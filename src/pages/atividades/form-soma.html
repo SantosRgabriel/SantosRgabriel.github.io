@@ -44,94 +44,113 @@
                 <div class="tab-pane fade show active" id="list-1" role="tabpanel" aria-labelledby="list-home-list">
                     <div>
                         <h2>Entendendo os inputs</h2>
-                        <input type="text" id="nome" placeholder="Digite seu nome">
-                        <button onclick="salvar()" class="btn btn-dark">salvar</button>
+                        <input type="text" id="nome" class="form-control" style="max-width: 200px;"
+                            placeholder="Digite seu nome:">
+                        <button onclick="salvar()" class="btn btn-dark" style="margin-top: 10px;">salvar</button>
                         <p id="result"></p>
                     </div>
                 </div>
                 <div class="tab-pane fade" id="list-2" role="tabpanel" aria-labelledby="list-profile-list">
                     <div>
                         <h2>Verificar idade</h2>
-                        <input type="number" id="idade" placeholder="digite uma idade">
-                        <button onclick="verIdade()" class="btn btn-dark">salvar</button>
+                        <input type="number" id="idade" class="form-control" style="max-width: 200px;"
+                            placeholder="digite uma idade:">
+                        <button onclick="verIdade()" class="btn btn-dark" style="margin-top: 10px;">salvar</button>
                         <p id="resultIdade"></P>
                     </div>
                 </div>
                 <div class="tab-pane fade" id="list-3" role="tabpanel" aria-labelledby="list-messages-list">
                     <div>
                         <h2>Comparando números</h2>
-                        <input type="number" id="num1" placeholder="digite um numero">
-                        <input type="number" id="num2" placeholder="digite outro numero">
-                        <button onclick="compNum()" class="btn btn-dark">salvar</button>
+                        <input type="number" id="num1" class="form-control" style="max-width: 200px;"
+                            placeholder="digite um numero:">
+                        <input type="number" id="num2" class="form-control" style="max-width: 200px;"
+                            placeholder="digite outro numero:">
+                        <button onclick="compNum()" class="btn btn-dark" style="margin-top: 10px;">salvar</button>
                         <p id="resultcomN"></p>
                     </div>
                 </div>
                 <div class="tab-pane fade" id="list-4" role="tabpanel" aria-labelledby="list-settings-list">
                     <div>
                         <h2>Verificando divisibilidade</h2>
-                        <input type="number" id="num3" placeholder="digite um numero">
-                        <input type="number" id="num4" placeholder="digite outro numero">
-                        <button onclick="comparar()" class="btn btn-dark">salvar</button>
+                        <input type="number" id="num3" class="form-control" style="max-width: 200px;"
+                            placeholder="digite um numero:">
+                        <input type="number" id="num4" class="form-control" style="max-width: 200px;"
+                            placeholder="digite outro numero:">
+                        <button onclick="comparar()" class="btn btn-dark" style="margin-top: 10px;">salvar</button>
                         <p id="resultVer"></p>
                     </div>
                 </div>
                 <div class="tab-pane fade" id="list-5" role="tabpanel" aria-labelledby="list-settings-list">
                     <div>
                         <h2>Verificar Temperatura</h2>
-                        <input type="number" id="temp" placeholder="digite um numero">
-                        <button onclick="verTemp()" class="btn btn-dark">salvar</button>
+                        <input type="number" id="temp" class="form-control" style="max-width: 200px;"
+                            placeholder="digite um numero:">
+                        <button onclick="verTemp()" class="btn btn-dark" style="margin-top: 10px;">salvar</button>
                         <p id="resulClima"></p>
                     </div>
                 </div>
                 <div class="tab-pane fade" id="list-6" role="tabpanel" aria-labelledby="list-settings-list">
                     <div>
                         <h2>Calculando fatorial</h2>
-                        <input type="number" id="fat" placeholder="digite um numero">
-                        <button onclick="calcuFat()" class="btn btn-dark">salvar</button>
+                        <input type="number" id="fat" class="form-control" style="max-width: 200px;"
+                            placeholder="digite um numero:">
+                        <button onclick="calcuFat()" class="btn btn-dark" style="margin-top: 10px;">salvar</button>
                         <p id="resulFat"></p>
                     </div>
                 </div>
                 <div class="tab-pane fade" id="list-7" role="tabpanel" aria-labelledby="list-settings-list">
                     <div>
                         <h2>Calculando uma tabuada</h2>
-                        <input type="number" id="numTab" placeholder="digite um numero">
-                        <button onclick="calcTab()" class="btn btn-dark">salvar</button>
+                        <input type="number" id="numTab" class="form-control" style="max-width: 200px;"
+                            placeholder="digite um numero:">
+                        <button onclick="calcTab()" class="btn btn-dark" style="margin-top: 10px;">salvar</button>
                         <p id="resulTab"></p>
                     </div>
                 </div>
                 <div class="tab-pane fade" id="list-8" role="tabpanel" aria-labelledby="list-settings-list">
                     <div>
                         <h2>Contagem Regressiva</h2>
-                        <input type="number" id="contNum" placeholder="digite um numero">
-                        <button onclick="contagem()" class="btn btn-dark">salvar</button>
+                        <input type="number" id="contNum" class="form-control" style="max-width: 200px;"
+                            placeholder="digite um numero:">
+                        <button onclick="contagem()" class="btn btn-dark" style="margin-top: 10px;">salvar</button>
                         <p id="resulCont"></p>
                     </div>
                 </div>
                 <div class="tab-pane fade" id="list-9" role="tabpanel" aria-labelledby="list-settings-list">
-                    <div>
-                        <div>
-                            <h2>Verificação de notas</h2>
-                            <h3>materia1</h3>
-                            <input type="number" id="m1b1" placeholder="digite um numero">
-                            <input type="number" id="m1b2" placeholder="digite um numero">
-                            <input type="number" id="m1b3" placeholder="digite um numero">
-                            <p id="mediam1"></p>
-                            <p id="situm1"></p>
-                            <h3>materia2</h3>
-                            <input type="number" id="m2b1" placeholder="digite um numero">
-                            <input type="number" id="m2b2" placeholder="digite um numero">
-                            <input type="number" id="m2b3" placeholder="digite um numero">
-                            <p id="mediam2"></p>
-                            <p id="situm2"></p>
-                            <h3>materia3</h3>
-                            <input type="number" id="m3b1" placeholder="digite um numero">
-                            <input type="number" id="m3b2" placeholder="digite um numero">
-                            <input type="number" id="m3b3" placeholder="digite um numero">
-                            <p id="mediam3"></p>
-                            <p id="situm3"></p>
+                    <div class="row">
+                        <div class="col-4" style="align-content: center;">
+
+                            <div class="row-cols-4" id="materia1">
+                                <div class="col">
+                                    <label for="nomeUsuario">Aluno</label>
+                                    <input type="text" id="nomeUsuario" class="form-control" style="max-width: 200px;">
+                                </div>
+                                <div class="col">
+                                    <label for="nomeInstituicao">Escola/Instituicao</label>
+                                    <input type="text" id="nomeInstituicao" class="form-control"
+                                        style="max-width: 200px;">
+                                </div>
+                                <div class="col">
+                                    <label for="nomeCurso">Curso</label>
+                                    <input type="text" id="nomeCurso" class="form-control" style="max-width: 200px;">
+                                </div>
+                                <div class="col-2 ">
+                                    <label for="nomeMateria">Matéria</label>
+                                    <select name="" id="nomeMaterias"></select>
+                                    <p id="materiaRepetida"></p>
+                                </div>
+                                <div class="col-2 p-md-4 input-group">
+                                    <input type="number" class="form-control" style="max-width: 200px;">
+                                    <input type="number" class="form-control" style="max-width: 200px;">
+                                    <input type="number" class="form-control" style="max-width: 200px;">
+                                    <input type="number" class="form-control" style="max-width: 200px;">
+                                </div>
+                            </div>
+                            <button onclick="save()" class="btn btn-dark" style="margin-top: 10px;">Verificar
+                                Notas</button>
+                            <p class="m-3 p-2" id="resultNotas"></p>
                         </div>
-                        <button onclick="nota()" class="btn btn-dark">salvar</button>
-                        <p id="message"></p>
                     </div>
                 </div>
             </div>
@@ -240,75 +259,97 @@
             }
         }
 
-        function nota() {
-            let notas1 = [
-                parseFloat(document.getElementById('m1b1').value),
-                parseFloat(document.getElementById('m1b2').value),
-                parseFloat(document.getElementById('m1b3').value)
-            ]
-            let notas2 = [
-                parseFloat(document.getElementById('m2b1').value),
-                parseFloat(document.getElementById('m2b2').value),
-                parseFloat(document.getElementById('m2b3').value)
-            ]
-            let notas3 = [
-                parseFloat(document.getElementById('m3b1').value),
-                parseFloat(document.getElementById('m3b2').value),
-                parseFloat(document.getElementById('m1b3').value)
-            ]
 
-            function valorValido(valor) {
-                return !isNaN(valor) && isFinite(valor)
-            }
 
-            function calcMed(vetor) {
-                let notasValidas = vetor.filter(valorValido)
-                if (notasValidas.length <3) {
-                    document.getElementById('message').innerText = "complete os campos"
-                    return "";
-                }
 
-                let media = 0
-                for (let i = 0; i < vetor.length; i++) {
-                    media += vetor[i]
+        let nomeMaterias = ["Português", "Matemática", "Biologia", "Inglês", "Geografia", "História"]
+        let select = document.getElementById("nomeMaterias")
+        nomeMaterias.forEach(function (materia) {
+            let option = document.createElement("option");
+            option.value = materia;
+            option.text = materia;
+            select.appendChild(option)
+        })
+        let materia = { id: 0, nome: "", notas: [], total: 0, printInfo: "" };
+        let materias = [];
+        let user = { nome: "", instituicao: "", curso: "" };
+        function save() {
+            let inputNotas = [];
+            let totalNotas = 0;
+            user.nome = nomeUsuario.value;
+            user.instituicao = nomeInstituicao.value;
+            user.curso = nomeCurso.value;
+            let resultados = `<b>BOLETIM DE: ${user.nome.toLocaleUpperCase()}</b><br><b>INSTITUIÇÃO/ESCOLA: 
+                ${user.instituicao.toLocaleUpperCase()}</b><br><b>CURSO: ${user.curso.toLocaleUpperCase()}</b>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th scope"col">Primeiro Bimestre</th>
+                        <th scope"col">Segundo Bimestre</th>
+                        <th scope"col">Terceiro Bimestre</th>
+                        <th scope"col">Quarto Bimestre</th>
+                        <th scope"col">Nota Final</th>
+                        <th scope"col">Situação</th>
+                        </tr>
+                        </thead>
+                        <tbody>`
 
-                }
-                media = media / vetor.length
-                document.getElementById('message').innerText = ""
-                return media
-            }
-            function verSitu(vetor) {
-                let notasValidas = vetor.filter(valorValido)
-                if (notasValidas.lenght < 3) {
-                    document.getElementById('message').innerText = "complete os campos"
-                    return "";
-                }
-                let soma = 0;
-                for (let i = 0; i < vetor.length; i++) {
-                    soma += vetor[i]
+                ;
 
-                }
-                return soma
-            }
-            document.getElementById('mediam1').innerHTML = "A média das noatas é: " + calcMed(notas1)
-            if (verSitu(notas1) >= 60) {
-                document.getElementById('situm1').innerHTML = "Aprovado"
+            document.querySelectorAll("div.input-group input").forEach(e => {
+                inputNotas.push(parseFloat(e.value))
+                totalNotas += parseFloat(e.value);
+            })
+
+            if (repetir(document.getElementById("nomeMaterias").value)) {
+                document.getElementById("materiaRepetida").innerHTML = "Matéria já adicionada"
             } else {
-                document.getElementById('situm1').innerText = "Reprovado"
-            }
-            document.getElementById('mediam2').innerHTML = "A média das noatas é: " + calcMed(notas2)
-            if (verSitu(notas2) >= 60) {
-                document.getElementById('situm2').innerHTML = "Aprovado"
-            } else {
-                document.getElementById('situm2').innerText = "Reprovado"
-            }
-            document.getElementById('mediam3').innerHTML = "A média das noatas é: " + calcMed(notas3)
-            if (verSitu(notas3) >= 60) {
-                document.getElementById('situm3').innerHTML = "Aprovado"
-            } else {
-                document.getElementById('situm3').innerText = "Reprovado"
-            }
 
+                document.getElementById("materiaRepetida").innerHTML = " "
+
+                let nomeMateria = document.getElementById("nomeMaterias").value
+                materias.push(
+                    {
+                        id: materia.id++,
+                        nome: nomeMateria,
+                        notas: inputNotas,
+                        total: totalNotas,
+                        info: `
+                           
+                            <tr>
+                              <td scope"row"> ${nomeMateria}</td>  
+                                <td > ${inputNotas[0]}</td>
+                                <td > ${inputNotas[1]}</td>
+                                <td > ${inputNotas[2]}</td>
+                                <td > ${inputNotas[3]}</td>
+                                <td > ${totalNotas}</b></td>
+                                <td > ${isAprovadoOuReprovado(totalNotas)}</td>
+                            </tr>
+                            `
+                    }
+                )
+
+                console.log(materias)
+
+                materias.forEach(e => {
+                    resultados += `<br>` + e.info;
+                })
+
+                resultNotas.innerHTML = resultados;
+            }
+        }
+        function isAprovadoOuReprovado(valor) {
+            if (valor >= 60) {
+                return "APROVADO"
+            } else {
+                return "REPROVADO"
+            }
+        }
+
+        function repetir(nomeMateria) {
+
+            return materias.some(materia => materia.nome === nomeMateria)
         }
 
 
