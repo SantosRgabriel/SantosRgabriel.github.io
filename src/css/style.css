@@ -159,12 +159,6 @@ section p.justify {
   color: white;
 }
 
-footer {
-  margin-top: 0;
-  background-color: gainsboro;
-  font-size: 10px;
-}
-
 ul {
   list-style: none;
   display: flex;
@@ -276,4 +270,19 @@ li {
   background-image: url(../images/jogos.png);
   background-size: cover;
   background-position: center;
+}
+
+footer {
+  display: flex;
+  position: relative;
+  bottom: 0;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 0;
+  background-color: gainsboro;
+  font-size: 10px;
+}
+
+footer#boletim{
+  position: absolute;
 }

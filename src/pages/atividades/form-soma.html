@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="/src/css/style.css">
 
     <title>Soma</title>
 </head>
@@ -37,6 +38,8 @@
                     href="#list-8" role="tab" aria-controls="list-settings">Contagem Regressiva</a>
                 <a class="list-group-item list-group-item-action" id="list-settings-list" data-bs-toggle="list"
                     href="#list-9" role="tab" aria-controls="list-settings">Boletim</a>
+                <a class="list-group-item list-group-item-action" id="list-settings-list" 
+                    href="/index.html">Voltar</a>
             </div>
         </div>
         <div class="col-8">
@@ -141,10 +144,10 @@
                                     <p id="materiaRepetida"></p>
                                 </div>
                                 <div class="col-2 p-md-4 input-group">
-                                    <input type="number" class="form-control" style="max-width: 200px;">
-                                    <input type="number" class="form-control" style="max-width: 200px;">
-                                    <input type="number" class="form-control" style="max-width: 200px;">
-                                    <input type="number" class="form-control" style="max-width: 200px;">
+                                    <input id="b1" type="number" class="form-control" style="max-width: 200px;">
+                                    <input id="b2" type="number" class="form-control" style="max-width: 200px;">
+                                    <input id="b3" type="number" class="form-control" style="max-width: 200px;">
+                                    <input id="b4" type="number" class="form-control" style="max-width: 200px;">
                                 </div>
                             </div>
                             <button onclick="save()" class="btn btn-dark" style="margin-top: 10px;">Verificar
@@ -273,9 +276,46 @@
         let materia = { id: 0, nome: "", notas: [], total: 0, printInfo: "" };
         let materias = [];
         let user = { nome: "", instituicao: "", curso: "" };
+
+        function validateInputFields() {
+            const nomeUsuarioValue = nomeUsuario.value.trim();
+            const nomeInstituicaoValue = nomeInstituicao.value.trim();
+            const nomeCursoValue = nomeCurso.value.trim();
+
+            if (!nomeUsuarioValue || !nomeInstituicaoValue || !nomeCursoValue) {
+                alert("Por favor, preencha todos os campos.");
+                return false;
+            }
+
+            return true;
+        }
         function save() {
+            // Validar entrada do usuário
+            if (!validateInputFields()) {
+                return;  // Se a validação falhar, retorne
+            }
+
             let inputNotas = [];
-            let totalNotas = 0;
+           let totalNotas = 0;
+
+            function valorValido(valor){
+                return !isNaN(valor) && isFinite(valor)
+            }
+            
+            
+            function validaCampo(valor,limite){
+                if(valorValido(valor) && valor <= limite && valor >= 0){
+                    inputNotas.push(valor)
+                }else{
+                    alert("Preencha todos as notas")
+                }
+            }
+            
+                        validaCampo(parseFloat(document.getElementById("b1").value),20)
+                        validaCampo(parseFloat(document.getElementById("b2").value),25)
+                        validaCampo(parseFloat(document.getElementById("b3").value),25)
+                        validaCampo(parseFloat(document.getElementById("b4").value),30)
+            
             user.nome = nomeUsuario.value;
             user.instituicao = nomeInstituicao.value;
             user.curso = nomeCurso.value;
@@ -297,18 +337,16 @@
 
                 ;
 
-            document.querySelectorAll("div.input-group input").forEach(e => {
-                inputNotas.push(parseFloat(e.value))
-                totalNotas += parseFloat(e.value);
-            })
-
+                inputNotas.forEach(e =>{
+                    totalNotas += e
+                })
             if (repetir(document.getElementById("nomeMaterias").value)) {
                 document.getElementById("materiaRepetida").innerHTML = "Matéria já adicionada"
             } else {
 
-                document.getElementById("materiaRepetida").innerHTML = " "
+                document.getElementById("materiaRepetida").innerHTML = ""
 
-                let nomeMateria = document.getElementById("nomeMaterias").value
+                const nomeMateria = document.getElementById("nomeMaterias").value
                 materias.push(
                     {
                         id: materia.id++,
@@ -356,6 +394,10 @@
 
 
     </script>
+
+    <footer id="boletim" class="container-grs content center">
+        <p class="center opacity wide">By Gabriel Ribeiro</p>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
