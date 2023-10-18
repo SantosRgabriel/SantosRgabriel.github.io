@@ -38,8 +38,7 @@
                     href="#list-8" role="tab" aria-controls="list-settings">Contagem Regressiva</a>
                 <a class="list-group-item list-group-item-action" id="list-settings-list" data-bs-toggle="list"
                     href="#list-9" role="tab" aria-controls="list-settings">Boletim</a>
-                <a class="list-group-item list-group-item-action" id="list-settings-list" 
-                    href="/index.html">Voltar</a>
+                <a class="list-group-item list-group-item-action" id="list-settings-list" href="/index.html">Voltar</a>
             </div>
         </div>
         <div class="col-8">
@@ -143,6 +142,7 @@
                                     <select name="" id="nomeMaterias"></select>
                                     <p id="materiaRepetida"></p>
                                 </div>
+                                <p id="alerta"></p>
                                 <div class="col-2 p-md-4 input-group">
                                     <input id="b1" type="number" class="form-control" style="max-width: 200px;">
                                     <input id="b2" type="number" class="form-control" style="max-width: 200px;">
@@ -296,30 +296,44 @@
             }
 
             let inputNotas = [];
-           let totalNotas = 0;
+            let totalNotas = 0;
 
-            function valorValido(valor){
+            function valorValido(valor) {
                 return !isNaN(valor) && isFinite(valor)
             }
-            
-            
-            function validaCampo(valor,limite){
-                if(valorValido(valor) && valor <= limite && valor >= 0){
-                    inputNotas.push(valor)
-                }else{
-                    alert("Preencha todos as notas")
+
+            function msgVC(limite){
+                if(limite===20){
+                    document.getElementById("alerta").innerHTML = "Insira uma nota positiva para o primeiro bimestre até 20 "
+                }else if(limite===25){
+                    document.getElementById("alerta").innerHTML = "Insira uma nota positiva para o segundo/terceiro bimestre até 25 "
+                }else if (limite===30){
+                    document.getElementById("alerta").innerHTML = "Insira uma nota positiva para o quarto bimestre até 30 "
                 }
             }
-            
-                        validaCampo(parseFloat(document.getElementById("b1").value),20)
-                        validaCampo(parseFloat(document.getElementById("b2").value),25)
-                        validaCampo(parseFloat(document.getElementById("b3").value),25)
-                        validaCampo(parseFloat(document.getElementById("b4").value),30)
-            
-            user.nome = nomeUsuario.value;
-            user.instituicao = nomeInstituicao.value;
-            user.curso = nomeCurso.value;
-            let resultados = `<b>BOLETIM DE: ${user.nome.toLocaleUpperCase()}</b><br><b>INSTITUIÇÃO/ESCOLA: 
+
+
+            function validaCampo(valor, limite) {
+                if (valorValido(valor) && valor <= limite && valor >= 0) {
+                    inputNotas.push(valor)
+                } else {
+                    msgVC(limite)
+                }
+            }
+
+            validaCampo(parseFloat(document.getElementById("b1").value), 20)
+            validaCampo(parseFloat(document.getElementById("b2").value), 25)
+            validaCampo(parseFloat(document.getElementById("b3").value), 25)
+            validaCampo(parseFloat(document.getElementById("b4").value), 30)
+
+            if (inputNotas.length < 4) {
+
+            } else {
+                document.getElementById("alerta").innerHTML = ""
+                user.nome = nomeUsuario.value;
+                user.instituicao = nomeInstituicao.value;
+                user.curso = nomeCurso.value;
+                let resultados = `<b>BOLETIM DE: ${user.nome.toLocaleUpperCase()}</b><br><b>INSTITUIÇÃO/ESCOLA: 
                 ${user.instituicao.toLocaleUpperCase()}</b><br><b>CURSO: ${user.curso.toLocaleUpperCase()}</b>
             <table class="table table-striped">
                 <thead>
@@ -335,25 +349,34 @@
                         </thead>
                         <tbody>`
 
-                ;
+                    ;
 
-                inputNotas.forEach(e =>{
+                inputNotas.forEach(e => {
                     totalNotas += e
                 })
-            if (repetir(document.getElementById("nomeMaterias").value)) {
-                document.getElementById("materiaRepetida").innerHTML = "Matéria já adicionada"
-            } else {
 
-                document.getElementById("materiaRepetida").innerHTML = ""
+                function isAprovadoOuReprovado(valor) {
+                    if (valor >= 60) {
+                        return "APROVADO"
+                    } else {
+                        return "REPROVADO"
+                    }
+                }
 
-                const nomeMateria = document.getElementById("nomeMaterias").value
-                materias.push(
-                    {
-                        id: materia.id++,
-                        nome: nomeMateria,
-                        notas: inputNotas,
-                        total: totalNotas,
-                        info: `
+                if (repetir(document.getElementById("nomeMaterias").value)) {
+                    document.getElementById("materiaRepetida").innerHTML = "Matéria já adicionada"
+                } else {
+
+                    document.getElementById("materiaRepetida").innerHTML = ""
+
+                    const nomeMateria = document.getElementById("nomeMaterias").value
+                    materias.push(
+                        {
+                            id: materia.id++,
+                            nome: nomeMateria,
+                            notas: inputNotas,
+                            total: totalNotas,
+                            info: `
                            
                             <tr>
                               <td scope"row"> ${nomeMateria}</td>  
@@ -365,30 +388,27 @@
                                 <td > ${isAprovadoOuReprovado(totalNotas)}</td>
                             </tr>
                             `
-                    }
-                )
+                        }
+                    )
 
-                console.log(materias)
+                    console.log(materias)
 
-                materias.forEach(e => {
-                    resultados += `<br>` + e.info;
-                })
+                    materias.forEach(e => {
+                        resultados += `<br>` + e.info;
+                    })
 
-                resultNotas.innerHTML = resultados;
+                    resultNotas.innerHTML = resultados;
+                }
             }
-        }
-        function isAprovadoOuReprovado(valor) {
-            if (valor >= 60) {
-                return "APROVADO"
-            } else {
-                return "REPROVADO"
+
+
+            function repetir(nomeMateria) {
+
+                return materias.some(materia => materia.nome === nomeMateria)
             }
+
         }
 
-        function repetir(nomeMateria) {
-
-            return materias.some(materia => materia.nome === nomeMateria)
-        }
 
 
 
